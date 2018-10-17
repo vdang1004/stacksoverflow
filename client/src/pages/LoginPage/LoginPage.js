@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
-import { Col, Row, Container } from "../../components/Grid";
+import "./LoginPage.css";
+import { Link } from "react-router-dom";
+// import Jumbotron from "../../components/Jumbotron";
+// import { Col, Row, Container } from "../../components/Grid";
 
 
 class LoginPage extends Component {
@@ -11,23 +13,21 @@ class LoginPage extends Component {
     savedPassword: "",
   };
 
- 
-
   render() {
+    
     return (
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>Login Page</h1>
-            </Jumbotron>
-            
-            <Col size="md-3">
-              
-            </Col>
-          </Col>
-        </Row>
-      </Container>
+      
+    <div>
+      <center>
+        <h1 className="animated fadeInDown">STACK$overflo</h1>
+        <input className="text animated slideInLeft fa-user" type="text" placeholder="Username" name="" ></input><br></br>
+        <input className="text animated slideInRight" type="password" placeholder="Password" name=""></input><br></br>
+        <button input className="btn login animated fadeInUp" type="Button" name="" value="Login" button onClick="move()">Login</button><br></br>
+        <p>Not a Member?</p>
+        <Link to="/signuppage">Sign Up</Link>
+      </center>
+    </div>
+      
     );
   }
 }
