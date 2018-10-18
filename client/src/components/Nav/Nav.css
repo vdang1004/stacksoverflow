@@ -1,0 +1,9 @@
+.navbar {
+    margin-bottom: 10px;
+    box-shadow: 0 8px 10px -4px #999;
+}
+
+#wrapper {
+    margin: 80px;
+    box-shadow: 0 8px 10px -6px #999;
+}

@@ -17,7 +17,8 @@ class LoginPage extends Component {
     
     return (
       
-    <div>
+    <div className="mainDiv">
+      <div >
       <center>
         <h1 className="animated fadeInDown">STACK$overflo</h1>
         <input className="text animated slideInLeft fa-user" type="text" placeholder="Username" name="" ></input><br></br>
@@ -26,6 +27,7 @@ class LoginPage extends Component {
         <p>Not a Member?</p>
         <Link to="/signuppage">Sign Up</Link>
       </center>
+    </div>
     </div>
       
     );
