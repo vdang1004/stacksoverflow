@@ -35,7 +35,7 @@ const Results = props => (
         ))}
       </List>
     ) : (
-      <h3>No Results to Display. Search for an Article.</h3>
+      <h3>No Results to Display.</h3>
     )}
   </Col>
 )

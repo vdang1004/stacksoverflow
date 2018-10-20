@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import GetSmarterPage from "./pages/GetSmarterPage";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+
 
 
 

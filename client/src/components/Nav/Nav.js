@@ -30,7 +30,7 @@ const Nav = () => (
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">GetSmarter</a>
+            <a className="nav-link" href="/getsmarterpage">GetSmarter</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Another Page</a>

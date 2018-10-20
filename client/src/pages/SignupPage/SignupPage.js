@@ -13,19 +13,17 @@ class SignupPage extends Component {
     savedPassword: "",
   };
 
- 
-
   render() {
     
     return (
       
     <div>
       <center>
-        <h1 className="mainTitle animated fadeInDown">STACK$overflo</h1>
+        <h1 className="title animated fadeInDown">STACK$overflo</h1>
         <input className="text animated slideInLeft" type="text" placeholder="Username" name="" ></input><br></br>
         <input className="text animated slideInRight" type="text" placeholder="Email" name="" ></input><br></br>
-        <input className="text animated slideInLeft" type="password" placeholder="Password" name=""></input>
-        <button input className="btn login animated fadeInUp" type="Button" name=""  button onClick="move()">Sign Up</button><br></br>
+        <input className="text animated slideInLeft" type="password" placeholder="Password" name=""></input><br></br>
+        <button input className="btn login animated fadeInUp" type="Button" name="" button onClick="">Sign Up</button><br></br>
         <p>Already a Member?</p>
         <Link className= "linkToLogin" to="/"> ← back to Login</Link>
       </center>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./LoginPage.css";
 import { Link } from "react-router-dom";
-// import Jumbotron from "../../components/Jumbotron";
+import Footer from "../../components/Footer";
 // import { Col, Row, Container } from "../../components/Grid";
 
 
@@ -20,7 +20,7 @@ class LoginPage extends Component {
     <div className="mainDiv">
       <div >
       <center>
-        <h1 className="animated fadeInDown">STACK$overflo</h1>
+        <h1 className="title animated fadeInDown">STACK$overflo</h1>
         <input className="text animated slideInLeft fa-user" type="text" placeholder="Username" name="" ></input><br></br>
         <input className="text animated slideInRight" type="password" placeholder="Password" name=""></input><br></br>
         <button input className="btn login animated fadeInUp" type="Button" name="" value="Login" button onClick="move()">Login</button><br></br>
@@ -28,6 +28,7 @@ class LoginPage extends Component {
         <Link to="/signuppage">Sign Up</Link>
       </center>
     </div>
+    <Footer/>
     </div>
       
     );

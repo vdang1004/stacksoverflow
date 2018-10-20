@@ -1,20 +1,47 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import "./GetSmarterPage.css";
 import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
 import Results from "../../components/Results";
+import Saved from "../../components/Saved";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { Link } from "react-router-dom";
+
 
 class GetSmarterPage extends Component {
   state = {
     articles: [],
     savedArticles: [],
     title: "",
-    startYear: "",
-    endYear: ""
   };
+
+  componentDidMount = () => {
+    // axios({
+    //   url:'https://jsonplaceholder.typicode.com/users',
+    //   method: 'GET'
+    // })
+    // .then((response) => {
+    //   console.log('Data: ', response.data);
+    //   this.setState({users: response.data});
+    // })
+    // .catch(() => {
+    //   alert('oops, there was an error');
+    // });
+    API.getArticles()
+    .then(res => {
+      console.log('article Data: ', res.data.response.docs);
+      this.setState(
+        { 
+          articles: res.data.response.docs, 
+          title: ""
+        });     
+    })
+    .catch(err => console.log(err));
+
+    this.loadSavedArticles();
+  }
 
   loadArticles = (searchTerm, startYear, endYear) => {
     API.getArticles(searchTerm, startYear, endYear)
@@ -25,7 +52,7 @@ class GetSmarterPage extends Component {
             title: "", 
             startYear: "", 
             endYear: "" })   
-        )
+      )
       .catch(err => console.log(err));
   };
 
@@ -33,6 +60,7 @@ class GetSmarterPage extends Component {
     API.saveArticle(obj)
       .then()
       .catch(err => console.log(err));
+      this.loadSavedArticles();
   };
 
   handleInputChange = event => {
@@ -42,10 +70,23 @@ class GetSmarterPage extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title) 
-      this.loadArticles(this.state.title, this.state.startYear, this.state.endYear)  
+  handleDelete = id => {
+    API.deleteArticle(id)
+      .then(res => this.loadSavedArticles())
+      .catch(err => console.log(err));
+    this.loadSavedArticles();
+  };
+
+  loadSavedArticles = () => {
+    API.getSavedArticles()
+      .then(res =>
+        this.setState(
+          { 
+            savedArticles: res.data 
+          }    
+        )
+        )
+      .catch(err => console.log(err));
   };
 
   render() {
@@ -57,7 +98,6 @@ class GetSmarterPage extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>Get Smarter</h1>
-              
             </Jumbotron>
           </Col>
         </Row>
@@ -69,7 +109,18 @@ class GetSmarterPage extends Component {
             />
           </Col>
         </Row>
+        <Row>
+        <Col size="md-12">
+            <Saved 
+              savedArticles={this.state.savedArticles}
+              delete={this.handleDelete}
+            />
+          </Col>
+        </Row>
       </Container>
+      <hr></hr>
+      <Footer/>
+      <hr></hr>
       </div>
     );
   }

@@ -16,7 +16,14 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/stackoverflow");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/stacksoverflow", function(error){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('mongoose connection success');
+  }
+
+});
 
 // Start the API server
 app.listen(PORT, function() {

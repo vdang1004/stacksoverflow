@@ -6,7 +6,7 @@ body {
     background: url(/images/CoinBGFilter.png) ;
     background-size: cover;
 }
-.mainTitle {
+/* .mainTitle {
     color: white;
 }
 .login-box {
@@ -90,7 +90,7 @@ p{
     width: 1%;
     height: 15px;
     background-color: green;
-}
+} */
 
 .linkToLogin {
     color: red;

@@ -18,19 +18,12 @@ export default {
   saveArticle: function(articleData) {
     return axios.post("/api/articles", articleData);
   },
-  getArticles: function(searchTerm, startYear, endYear) {
+
+  getArticles: function() {
 
     const authKey = "13fafaa91bdd42edb84e413761c855ba"; 
     
-    let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=" + searchTerm;
-
-    if(startYear) {
-      queryURL = queryURL +  "&begin_date=" + startYear + "0101";
-    };
-
-    if(endYear) {
-      queryURL = queryURL +  "&end_date=" + endYear + "0101";
-    }
+    let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=" + "manage personal finances";
 
     return axios.get(queryURL);
   }
