@@ -1,4 +1,4 @@
-body {
+/* body {
     padding-bottom: 80px;
 }
 form {
@@ -9,7 +9,7 @@ form {
 input[type=checkbox],
 input[type=radio] {
     margin-right: 8px;
-}
+} */
 .form-label.capitalize {
     text-transform: capitalize;
 }
@@ -18,10 +18,10 @@ input[type=radio] {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.checkbox-group .form-label {
+/* .checkbox-group .form-label {
     width: 50%;
-}
-input[type=submit],
+} */
+/* input[type=submit],
 .btn-link {
     margin-top: 20px;
-}
+} */
