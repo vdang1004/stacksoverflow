@@ -1,5 +1,4 @@
 import React from "react";
-import Jumbotron from "../../components/Jumbotron";
 import SaveBtn from "../../components/SaveBtn";
 import { Col } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
@@ -7,9 +6,7 @@ import { List, ListItem } from "../../components/List";
 const Results = props => (
 
   <Col size="md-12 sm-12">
-    <Jumbotron>
-      <h1>Build Your Knowledge Base</h1>
-    </Jumbotron>
+    
     {props.articles.length ? (
       <List>
         {props.articles.map(article => (

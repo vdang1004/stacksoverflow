@@ -1,32 +1,26 @@
 @import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-body {
+@import"https://fonts.googleapis.com/css?family=Indie+Flower";
+
+body, html {
+    height: 100%;
+}
+.mainDiv {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background: url(/images/CoinBGFilter.png) ;
-    background-size: cover;
-}
-/* .mainTitle {
-    color: white;
-}
-.login-box {
- width: 280px;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%,-50%);
- color: white;
+    /*font-family: 'Indie Flower', cursive;*/
+       
 }
 
-.login-box h1{
-    float: left;
-    font-size: 50px;
-    margin-bottom:5px;
-    padding: 13px 40px;
-    color: aquamarine;
-    font-family: 'Indie Flower', cursive;
-}
+
 .text{
+    border: none;
+    outline: none;
+    background: none;
     width: 100%;
     overflow: hidden;
     font-size: 20px;
@@ -35,9 +29,11 @@ body {
     border-bottom: 6px solid aquamarine; 
     border-radius: 5px;
     transition: 1s all ease; 
+    font-family: 'Indie Flower', cursive;
+    
 }
 .text:hover {
-    background-color: #ff7675;
+    background-color: #ff9898;
     width: 100%;
 }
 .text i{
@@ -56,7 +52,7 @@ body {
     margin: 0  5px;
 }
 
-.btn{
+/* .btn{
     width: 50%;
     background-color: aquamarine;
     border: 2px solid  aquamarine;
@@ -71,27 +67,31 @@ body {
 
 .btn:hover {
     background-color: #ff7675;
-    width: 100%;
-}
-
-p{
-    
-    font-size: 40px;
-    margin-bottom:5px;
-    padding: 13px 40px;
-    color: aquamarine;
-
-}
-#myProgress {
-    width: 100%;
-    background-color: grey;
-}
-#myBar {
-    width: 1%;
-    height: 15px;
-    background-color: green;
 } */
 
-.linkToLogin {
-    color: red;
+.sign{
+    
+    font-size: 20px;
+    margin-bottom:5px;
+    padding: 13px 40px;
+    color: gray;
+    animation-delay: 0.5s;
+
+}
+.signup {
+    animation-delay: 0.8s;
+    font-size: 20px;
+    margin-bottom:5px;
+}
+.h1 {
+    font-family: 'Indie Flower', cursive;
+}
+.p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+#block_container {
+    display: flex;
+    justify-content: center;
 }

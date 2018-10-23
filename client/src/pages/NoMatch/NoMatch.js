@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
+import { Link } from "react-router-dom";
 
 const NoMatch = () => (
   <Container fluid>
@@ -14,6 +15,7 @@ const NoMatch = () => (
             </span>
           </h1>
         </Jumbotron>
+        <Link to="/homepage"><h4>← back to Home</h4></Link>
       </Col>
     </Row>
   </Container>

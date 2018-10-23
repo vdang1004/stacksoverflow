@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+var runScrape = require("./controllers/fetch");
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -28,4 +29,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/stacksoverflow"
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  runScrape.scrapeHeadlines();
 });

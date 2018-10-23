@@ -2,13 +2,13 @@ import React from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import { Col } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import Jumbotron from "../../components/Jumbotron";
+
 
 const Saved = props => (
   <Col size="md-12 sm-12">
-    <Jumbotron>
-      <h1>Save to Read Later</h1>
-    </Jumbotron>
+    
+    <img src="/images/saved.png" />
+    
     {props.savedArticles.length ? (
       <List>
         {props.savedArticles.map(article => (
@@ -27,7 +27,7 @@ const Saved = props => (
         ))}
       </List>
     ) : (
-      <h3>No Results to Display. Find & Save an Article.</h3>
+      <h3>No Results to Display. Save an Article.</h3>
     )}
   </Col>
 )
