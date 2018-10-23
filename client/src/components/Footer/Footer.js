@@ -18,7 +18,7 @@ const Footer = () => (
                 <a href="#!">HOME</a>
               </li>
               <li>
-                <a href="#!">Rap Sheet</a>
+                <a href="/rapsheetpage">Rap Sheet</a>
               </li>
               <li>
                 <a href="#!">Piggy Bank</a>
