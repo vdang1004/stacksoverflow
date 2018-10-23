@@ -5,6 +5,7 @@ import ErrorLoginPage from "./pages/ErrorLoginPage";
 import SignupPage from "./pages/SignupPage";
 import HomePage from "./pages/HomePage";
 import GetSmarterPage from "./pages/GetSmarterPage";
+import RapSheetPage from "./pages/RapSheetPage";
 import NoMatch from "./pages/NoMatch";
 import piggyBank from "./pages/piggyBank";
 import goodKarma from "./pages/goodKarma";
@@ -26,6 +27,7 @@ const App = () => (
         <Route exact path="/getsmarterpage" component={GetSmarterPage} />
         <Route exact path="/piggyBankpage" component={piggyBank} />
         <Route exact path="/goodKarmapage" component={goodKarma} />
+        <Route exact path="/rapsheetpage" component={RapSheetPage} />
         <Route component={NoMatch} />
         
       </Switch>

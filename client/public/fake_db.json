@@ -1,0 +1,11 @@
+{
+  "ownerName": "",
+  "petSelections": ["Rent", "Utilities", "Loans", "Monthly Subscriptions", "Groceries", "Paycheck", "Owed Money", "Present"],
+  "selectedPets": ["Rent", "Utilities", "Loans"],
+  "ageOptions": ["Deposit", "Withdraw"],
+  "ownerAgeRangeSelection": "",
+  "siblingOptions": ["yes", "no"],
+  "siblingSelection": ["yes"],
+  "currentPetCount": 0,
+  "description": ""
+}
