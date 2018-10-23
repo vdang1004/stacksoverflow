@@ -1,0 +1,32 @@
+@import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import"https://fonts.googleapis.com/css?family=Indie+Flower";
+
+body {
+    /* margin-top: 40px;*/
+     color: rgb(91, 105, 101);
+     font-family: sans-serif;
+     
+     background-size: cover;
+     background-attachment: fixed;
+     background-color: white
+}
+
+
+.pigImg {
+    width: 400px;
+    height: 400px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.main-container {
+    text-align: center;
+    margin: 50;
+    background-image: url(/images/Image_BG.jpg);
+}
+
+.savingsForm {
+    margin: 5px;
+}
