@@ -30,6 +30,7 @@ class SignupPage extends Component {
     console.log('Email on Submit: ', email);
     console.log('Password on Submit: ', password);
     console.log(this.state);
+    window.location.replace('/');
   };
 
   saveLogin = () => {

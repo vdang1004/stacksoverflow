@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./LoginPage.css";
+import "./ErrorLoginPage.css";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 
 
-class LoginPage extends Component {
+class ErrorLoginPage extends Component {
   state = {
     user: '',
     email: '',
@@ -56,13 +56,13 @@ class LoginPage extends Component {
       
     <div className="mainDiv">
       <div id="block_container">
-      <div id="bloc2" className="p animated bounceInUp" style={{color: "#1ABC9C"}}>$TACKS             </div>
-      <div id="bloc1" className="h1 animated bounceInDown" style={{color: "gray"}}><strong> overflow </strong></div>
-    </div>
+        <div id="bloc2" className="p animated bounceInUp" style={{color: "#1ABC9C"}}>$TACKS             </div>
+        <div id="bloc1" className="h1 animated bounceInDown" style={{color: "gray"}}><strong> overflow </strong></div>
+      </div>
 
    <div>
       <center>
-      <div id="bloc3" className="h4 animated fadeInDown" style={{color: "gray"}}><strong>Welcome, please sign in.</strong></div>
+      <div id="bloc3" className="h4 animated bounceInRight" style={{color: "red"}}><strong>Sorry, please try again.</strong></div>
         <input type='text' onChange={this.handleInputChange} name='user' className="text animated slideInLeft" placeholder="Username"></input><br></br>
         <input type='password' onChange={this.handleInputChange} name='password' className="text animated slideInRight" placeholder="Password"></input><br></br>
         <button onClick={this.handleSubmit} className="btn login animated fadeInUp">Login</button><br></br>
@@ -78,4 +78,4 @@ class LoginPage extends Component {
   }
 }
 
-export default LoginPage;
+export default ErrorLoginPage;

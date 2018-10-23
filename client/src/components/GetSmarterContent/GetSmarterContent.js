@@ -18,14 +18,14 @@ const GetSmarterContent = props => (
     </Row>
     <Row>
       <Col size="md-4">
-        <h4 style={{color: "#1ABC9C"}}>Banking & Loans</h4>
-        <p>
+        <h4 className="bankLoan1 animated fadeInLeft" style={{color: "#1ABC9C"}}>Banking & Loans</h4>
+        <p className="bankLoan2 animated fadeInLeft">
           Banks have many tools to help balance your income & expenses.  To accumulate more money for investing, banks will work to earn your business and money.  
           On a daily basis, they take most or all of the accumulated/deposited cash and use it for investing.  
           Banks will work with you to keep your banking account fees low or even free, in most cases.  
           The FDIC insures and guarantees that banks will not lose your money, as long as it is in a regular deposit account (checking/savings)
         </p>
-        <p>
+        <p className="banking3 animated fadeInLeft">
           Most banks provide Loans to help consumers make large purchases, such as home and car buying.  
           Since most people do not have enough cash on-hand to out-right purchase the things they want, sometimes loans are used to help with that.  
           The money charged to borrow this upfront cash is called interest and is usually payed through the life of the loan.  
@@ -45,13 +45,13 @@ const GetSmarterContent = props => (
         </p>
       </Col>
       <Col size="md-4">
-        <h4 style={{color: "#1ABC9C"}}>Investing</h4>
-        <p>
+        <h4 className="banking animated fadeInRight" style={{color: "#1ABC9C"}}>Investing</h4>
+        <p className="banking animated fadeInRight">
           Investing can come in many shapes and forms.  Generally, its almost like loaning your money to an entity and having them pay you on the interest they disclose.  
           Other forms of investing are generally like placing bets on companies.  Extensive research should be done here before investing.
         </p>
-        <h4 style={{color: "#1ABC9C"}}>Retirement Planning</h4>
-        <p>
+        <h4 className="banking animated fadeInRight" style={{color: "#1ABC9C"}}>Retirement Planning</h4>
+        <p className="banking animated fadeInRight">
           Put away money so you can stop working!  There are money options.  Anytime you put money in a bank, they have to pay interest to you.  
           Anytime an entity holds money that does not belong to them, they have to pay interest to whoever it belongs to.  
           Since they know that you’ll be leaving the money with them until you retire, they usually pay higher interest rates.  
