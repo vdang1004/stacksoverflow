@@ -3,32 +3,27 @@ import axios from 'axios';
 import "./GetSmarterPage.css";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
+import ScrapedResults from "../../components/ScrapedResults";
+import GetSmarterContent from "../../components/GetSmarterContent";
 import Results from "../../components/Results";
 import Saved from "../../components/Saved";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
+import GetSmarterLinks from "../../components/GetSmarterLinks";
+
 
 
 class GetSmarterPage extends Component {
   state = {
+    headlines: [],
     articles: [],
     savedArticles: [],
     title: "",
   };
 
   componentDidMount = () => {
-    // axios({
-    //   url:'https://jsonplaceholder.typicode.com/users',
-    //   method: 'GET'
-    // })
-    // .then((response) => {
-    //   console.log('Data: ', response.data);
-    //   this.setState({users: response.data});
-    // })
-    // .catch(() => {
-    //   alert('oops, there was an error');
-    // });
+    
     API.getArticles()
     .then(res => {
       console.log('article Data: ', res.data.response.docs);
@@ -40,21 +35,21 @@ class GetSmarterPage extends Component {
     })
     .catch(err => console.log(err));
 
-    this.loadSavedArticles();
-  }
-
-  loadArticles = (searchTerm, startYear, endYear) => {
-    API.getArticles(searchTerm, startYear, endYear)
-      .then(res =>
+    API.getHeadlines()
+      .then(res => {
+        console.log('headline Data: ', res.data);
         this.setState(
           { 
-            articles: res.data.response.docs, 
-            title: "", 
-            startYear: "", 
-            endYear: "" })   
-      )
+            headlines: res.data 
+          }    
+        )
+        })
       .catch(err => console.log(err));
-  };
+
+    this.loadSavedArticles();
+
+    
+  }
 
   saveArticle = obj => {
     API.saveArticle(obj)
@@ -96,13 +91,17 @@ class GetSmarterPage extends Component {
         <Nav/>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
-              <h1>Get Smarter</h1>
-            </Jumbotron>
+            <GetSmarterContent/>
           </Col>
         </Row>
         <Row>
-        <Col size="md-12">
+          <Col size="md-6">
+            <ScrapedResults
+            headlines={this.state.headlines}
+            saveArticle={this.saveArticle}
+            />
+          </Col>
+          <Col size="md-6">
             <Results 
             articles={this.state.articles}
             saveArticle={this.saveArticle}
@@ -111,12 +110,20 @@ class GetSmarterPage extends Component {
         </Row>
         <Row>
         <Col size="md-12">
+        <br></br>
             <Saved 
               savedArticles={this.state.savedArticles}
               delete={this.handleDelete}
             />
           </Col>
         </Row>
+        <Row>
+        <Col size="md-12">
+        <br></br>
+            <GetSmarterLinks />
+          </Col>
+        </Row>
+        <br></br>
       </Container>
       <hr></hr>
       <Footer/>

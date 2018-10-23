@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import HomePage from "./pages/HomePage";
 import GetSmarterPage from "./pages/GetSmarterPage";
 import NoMatch from "./pages/NoMatch";
 
@@ -14,6 +15,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/signuppage" component={SignupPage} />
+        <Route exact path="/homepage" component={HomePage} />
         <Route exact path="/getsmarterpage" component={GetSmarterPage} />
         <Route component={NoMatch} />
       </Switch>

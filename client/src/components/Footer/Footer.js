@@ -15,16 +15,16 @@ const Footer = () => (
             <h5 className="text-uppercase">Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">HOME</a>
+                <a href="/homepage">HOME</a>
               </li>
               <li>
-                <a href="#!">Rap Sheet</a>
+                <a href="/rapsheetpage">Rap Sheet</a>
               </li>
               <li>
-                <a href="#!">Piggy Bank</a>
+                <a href="/piggybankpage">Piggy Bank</a>
               </li>
               <li>
-                <a href="#!">Good Karma</a>
+                <a href="/goodkarmapage">Good Karma</a>
               </li>
             </ul>
         </div>
@@ -36,7 +36,7 @@ const Footer = () => (
                 <a href="/getsmarterpage">Get Smarter</a>
               </li>
               <li>
-                <a href="#!">Debt Collector</a>
+                <a href="debtcollectorpage">Debt Collector</a>
               </li>
               
             </ul>

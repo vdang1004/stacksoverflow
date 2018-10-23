@@ -22,9 +22,21 @@ export default {
   getArticles: function() {
 
     const authKey = "13fafaa91bdd42edb84e413761c855ba"; 
-    
     let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=" + "manage personal finances";
-
     return axios.get(queryURL);
+  },
+
+
+  getHeadlines: function() {
+    return axios.get("/api/headlines");
+  },
+
+  getLogins: function() {
+    return axios.get("/api/logins");
+  },
+
+  signUp: function(loginData) {
+    return axios.post("/api/logins", loginData);
   }
+
 };
